@@ -3,11 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <title>Document</title>
+    <title><%= locals.title %></title>
+    <meta name="description" content="<%= locals.desc %>">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script type="text/javascript" defer src="/js/script.js"></script>
 </head>
 <body>
     
-    
+    <div class="container">
+        <%- include('../partials/header.ejs') %>
+        <main class="main">
+            <%- body %>
+        </main>
+        <%- include('../partials/footer.ejs') %>
+    </div>
 
 </body>
 </html>
