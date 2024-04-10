@@ -1,0 +1,263 @@
+/* SETUP STYLES */
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+:root {
+    --black: #1c1c1c;
+    --grey: #7e7e7e;
+    --grey-light: e4e4e4;
+    --red: #b30000;
+    --font-size-base: 1rem;
+    --font-size-xbase: 1.2rem;
+    --font-size-md: clamp(1.10rem, 0.5vw + 1.1rem, 1.4rem);
+    --font-size-lg: clamp(1.5rem, 1vw + 1.3rem, 2.1rem);
+    --font-size-xl: clamp(2.4rem, 2.4vw + 1.8rem, 3.75rem);
+    --border-radius: 20px;
+}
+
+/* MAIN BODY STYLES  */
+
+body {
+    font-family: "Lexend", sans-serif;
+    background-color: #f2f2f2;
+    color: var(--black);
+    font-size: var(--font-size-base);
+    margin: 0;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="passwod"],
+input[type="search"],
+search,
+textarea {
+    font-family: "Lexend", sans-serif;
+    font-size: var(--font-size-base);
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.7rem 0.75rem;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: var(--font-size-xl);
+}
+
+h2 {
+    font-size: var(--font-size-lg);
+}
+
+h3 {
+    font-size: var(--font-size-md);
+}
+
+a {
+    color: var(--black);
+    text-decoration: none;
+    text-decoration-color: white;
+}
+
+.nav-links a:hover {
+    color: var(--grey);
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-decoration-color: var(--grey);
+}
+
+.btn {
+    background-color: var(--black);
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+a, .btn {
+    transition: all 300ms ease;
+}
+
+.btn-delete {
+    padding: 10px 16px;
+    background-color: var(--red);
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* LAYOUT STYLES  */
+
+.container {
+    max-width: 982px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.main {
+    padding: 20px 0;
+}
+
+.hero-image {
+    max-height: 528px;
+    filter: drop-shadow(0px 44px 34px rgba(0,0,0,0.25));
+    overflow: hidden;
+    border-radius: var(--border-radius);
+}
+
+/* NAV BAR STYLES  */
+
+nav, .nav-links {
+    display: flex;
+}
+
+nav {
+    max-width: 982px;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+}
+
+.nav-links {
+    gap: 2rem;
+    list-style: none;
+    font-size: var(--font-size-md);
+}
+
+.header__logo {
+    font-size: var(--font-size-lg);
+    font-weight: bold;
+}
+
+.header__logo:hover {
+    cursor: default;
+}
+
+/* HOMEPAGE STYLES */
+.author {
+    padding: 10px 0;
+    text-align: center;
+}
+
+.author__heading {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.author__body {
+    font-size: var(--font-size-md);
+    margin: 5px 0 40px 0;
+}
+
+/* ARTICLE STYLES  */
+.article__heading {
+    margin-top: 4rem;
+    font-weight: 400;
+}
+
+.article-ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: var(--font-size-xbase);
+    display: flex;
+    flex-direction: column;
+}
+
+.article-list__date {
+    font-size: var(--font-size-xbase);
+    color: var(--grey);
+    width: 260px;
+    display: inline-block;
+}
+
+.pagination {
+    color: var(--grey);
+    margin-top: 40px;
+    display: inline-block;
+}
+
+.pagination:hover {
+    color: var(--black);
+}
+
+.article-ul li a {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 18px 0;
+}
+
+.article-ul li {
+    font-size: 24px;
+    cursor: pointer;
+    transition: filter 100ms;
+}
+
+.article-ul li:not(:last-child) {
+    border-bottom: 1px solid var(--grey-light);
+}
+
+.article-ul li:hover {
+    filter: none;
+}
+
+.article-ul:hover li {
+    filter: blur(3px);
+}
+
+.article-ul:hover li:hover {
+    filter: none;
+}
+
+@media only screen and (min-width: 768px) {
+    .article-ul li a {
+        flex-direction: row;
+        align-items: center;
+    }
+    .article-list__date {
+        text-align: right;
+    }
+}
+
+/* FOOTER STYLES  */
+
+.footer {
+    margin: 4rem;
+    text-align: center;
+}
+
+/* ADMIN CONTROL STYLES */
+.admin-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admin-posts {
+    padding: 0;
+    margin: 0;
+}
+
+.admin-post-controls {
+    display: inline-block;
+}
+
+.admin-post-controls .btn {
+    display: inline-block;
+    background-color: var(--black);
+    color: var(--grey-light);
+    border: 0;
+    text-decoration: none;
+    font-size: 0.8rem;
+    padding: 4px 8px;
+    line-height: 2;
+}
+
+.admin-posts li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
