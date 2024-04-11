@@ -72,6 +72,7 @@ a {
     text-decoration: none;
     margin: 4px 2px;
     cursor: pointer;
+    border-radius: var(--border-radius);
 }
 
 a, .btn {
@@ -101,10 +102,16 @@ img {
 }
 
 .hero-image {
-    max-height: 528px;
+    height: 480px;
+    width: auto;
     filter: drop-shadow(0px 44px 34px rgba(0,0,0,0.25));
     overflow: hidden;
     border-radius: var(--border-radius);
+}
+
+.image-container {
+    display: block;
+    text-align: center;
 }
 
 /* NAV BAR STYLES  */
@@ -135,6 +142,14 @@ nav {
     cursor: default;
 }
 
+.header__btn {
+    border: none;
+    padding: 0.5rem;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-xbase);
+}
+
 /* HOMEPAGE STYLES */
 .author {
     padding: 10px 0;
@@ -154,7 +169,7 @@ nav {
 
 /* ARTICLE STYLES  */
 .articles__heading {
-    margin-top: 3rem;
+    margin-top: 4rem;
     font-weight: 400;
 }
 
@@ -244,7 +259,7 @@ nav {
 }
 
 .admin-post-controls {
-    display: inline-block;
+    display: flex;
 }
 
 .admin-post-controls .btn {
@@ -256,6 +271,7 @@ nav {
     font-size: 0.8rem;
     padding: 4px 8px;
     line-height: 2;
+    border-radius: 0;
 }
 
 .admin-posts li {
