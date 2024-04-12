@@ -1,2 +1,2 @@
-# blog-site
+# BeckBlogs 
 A personal blog website for writing down my thoughts on. Built with nodejs, express, mongodb.
